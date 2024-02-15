@@ -17,3 +17,30 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: var(--mj-accent-blue);
+    color: white;
+}
+
+th {
+    background-color: var(--mj-blue);
+    color: white;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    margin: 10px;
+}
