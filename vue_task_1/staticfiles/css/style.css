@@ -1,0 +1,19 @@
+/* Universal styles */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    --mj-blue: #2d526d;
+    --mj-accent-blue: #4f81bd;
+    --mj-orange: #ff8d40;
+    --mj-red: #c82e2e;
+}
+
+#app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
