@@ -44,3 +44,19 @@ th, td {
     padding: 8px;
     margin: 10px;
 }
+
+/* Button styles */
+.btn-mj-red {
+    background-color: var(--mj-red);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn-mj-red:hover {
+    background-color: var(--mj-red);
+    opacity: 0.8;
+}
