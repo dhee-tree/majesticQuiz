@@ -1,8 +1,10 @@
 # Majestic Quiz
 
-## By: Ighomena Daniel Odebala
+## By: Ighomena Odebala
 
-* Links
-    * [Vue Watcher - W3Shools](https://www.w3schools.com/vue/vue_watchers.php)
-    * [Vue Methods - W3Shools](https://www.w3schools.com/vue/vue_methods.php)
-    * [Vue v-show - W3Shools](https://www.w3schools.com/vue/vue_v-show.php)
+Welcome to my Majestic Quiz repository. This repository contains the code for the test B - Vue and reactive frameworks and the test C - visualising data.
+
+- To view the code for the test B - Vue and reactive frameworks, navigate to the `vue_task_1` directory. 
+- To view the code for the test C - visualising data, navigate to the `visualising_data_task` directory.
+
+Each test directory contains a `README.md` file that contains the details of the task, the approach, the resources used, the language and libraries used, the installation, and the usage.
