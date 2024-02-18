@@ -1,8 +1,8 @@
 # Majestic Quiz (Test C - Visualising Data)
 
-### By: Ighomena Odebala
+## By: Ighomena Odebala
 
-#### Task
+### Task
 Create a visualisation of each set of fictitious data.
 
 #### Approach
@@ -12,7 +12,7 @@ Create a visualisation of each set of fictitious data.
 - The `visualisation.py` file contains the class that takes in the data, labels and title as parameters.
 - The `main.py` file contains the main program that runs the visualisation.
 
-### Resources
+#### Resources
 - [Matplotlib](https://matplotlib.org/stable/tutorials/lifecycle.html#sphx-glr-tutorials-lifecycle-py)
 
 ## Language and Libraries Used
