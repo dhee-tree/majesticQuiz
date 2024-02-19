@@ -9,5 +9,5 @@ Welcome to my Majestic Quiz repository. This repository contains the code for th
 
 Each test directory contains a `README.md` file that contains the details of the task, the approach, the resources used, the language and libraries used, the installation, and the usage.
 
-More on visualising data task:
+## More on visualising data task:
 I have also used Django to create a web application for the test C - visualising data. The code for the Django web application can be found in the `django-visualisation` branch with its own README.md file.
