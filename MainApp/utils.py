@@ -18,10 +18,13 @@ class DataVisualisation:
         data_amount = list(self.data.values())
 
         plt.style.use('seaborn-v0_8-whitegrid')
-        plt.rcParams.update({'figure.autolayout': True})
+        plt.rcParams.update({
+            'figure.autolayout': True,
+            'figure.constrained_layout.h_pad':  100,
+            })
 
         fig, ax = plt.subplots()
-        ax.barh(data_names, data_amount)
+        ax.bar(data_names, data_amount)
 
         labels = ax.get_xticklabels()
         plt.setp(labels, rotation=45, horizontalalignment='right')
@@ -29,5 +32,5 @@ class DataVisualisation:
         ax.set_xlabel(self.x_label)
         ax.set_ylabel(self.y_label)
         plt.title(self.title)
-        plt.savefig(staticfiles_storage.path(f'image/{filename}'), transparent=True, bbox_inches='tight', dpi=80)
+        plt.savefig(staticfiles_storage.path(f'image/{filename}'), dpi=80)
         plt.close()
