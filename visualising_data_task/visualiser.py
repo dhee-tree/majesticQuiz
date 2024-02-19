@@ -15,6 +15,7 @@ class DataVisualisation:
         data_names = list(self.data.keys())
         data_amount = list(self.data.values())
 
+        plt.style.use('seaborn-v0_8-whitegrid')
         plt.rcParams.update({'figure.autolayout': True})
 
         fig, ax = plt.subplots()
