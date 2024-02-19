@@ -20,7 +20,10 @@ Create a visualisation of each set of fictitious data.
 - [Matplotlib](https://matplotlib.org/)
 
 ## Installation
-- Run `pip install -r requirements.txt` to install the required libraries
+Assuming you have python installed on your computer, follow the steps below to install the required libraries and run the program:
+- Navigate to the directory with `cd visualising_data_task`.
+- Create or activate a virtual environment (optional).
+- Run `pip install -r requirements.txt` to install the required libraries.
 
 ## Usage
 1. Run `python main.py` to start the program.
