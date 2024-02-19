@@ -29,3 +29,8 @@ Create a visualisation of each set of fictitious data.
 4. The visualisation of the data would be displayed.
 5. Close the visualisation to see the next visualisation.
 6. Repeat steps 3 and 4 to see the visualisation of the other data
+
+More on visualising data task:
+I created a django web application for the visualising data task. The code for the Django web application can be found in the  [django-visualisation](https://github.com/dhee-tree/majesticQuiz/tree/django-visualisation) branch of this repository.
+
+It is deployed on Heroku and can be accessed [here](https://vis.ighomena.me/)
