@@ -1,0 +1,5 @@
+MainApp/
+majesticDataProject/
+static/
+staticfiles/
+db.sqlite3
