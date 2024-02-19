@@ -2,13 +2,30 @@
 
 ## By: Ighomena Odebala
 
-Welcome to my Majestic Quiz repository. This repository contains the code for the test B - Vue and reactive frameworks and the test C - visualising data.
+This is the django web application for [visualisng_data_task](https://github.com/dhee-tree/majesticQuiz/tree/main/visualising_data_task) on the main branch of this repository.
+Welcome to my Majestic Quiz repository, django-visualisation branch. 
 
-- To view the code for the test B - Vue and reactive frameworks, navigate to the `vue_task_1` directory. 
-- To view the code for the test C - visualising data, navigate to the `visualising_data_task` directory.
+This branch contains the code for the django web application that visualises the data from test C.
 
-Each test directory contains a `README.md` file that contains the details of the task, the approach, the resources used, the language and libraries used, the installation, and the usage.
+The application is built using the django framework and the data is visualised using the matplotlib library.
 
-## Additional Information
 
-I have also used Django to create a web application for the test C - visualising data. The code for the Django web application can be found in the `django-visualisation` directory with its own `README.md` file.
+## Technologies used
+
+- Python
+- Django
+- Matplotlib
+- Heroku
+- Cloudflare
+
+## Running the application locally
+
+Assuming you have python installed on your machine and have access to the environment variables for the application, you can run the application locally using the following steps:
+- Clone the repository
+- Install the requirements using the command `pip install -r requirements.txt`
+- Run the application using the command `python manage.py runserver`
+
+## Accessing the application
+
+The application is hosted on heroku and can be accessed via the link below:
+[https://vis.ighomena.me/](https://vis.ighomena.me/)
