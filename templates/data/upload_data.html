@@ -1,5 +1,6 @@
 {% extends "utils/base.html" %}
 {% block title %}Upload Data{% endblock %}
+{% load static %}
 
 {% block main %}
     <div class="container">
@@ -34,6 +35,7 @@
                     {{ form.as_p }}
                     <button type="submit" class="btn-mj-accent-blue">Upload</button>
                 </form>
+                <a href="{% static 'samples/population.csv' %}"> Download Sample CSV File </a>
             </div>
 
             <div class="col-sm-12 text-center pt-5">
