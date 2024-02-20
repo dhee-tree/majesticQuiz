@@ -24,17 +24,21 @@ class UploadDataView(View):
 
             saved_file = fs.path(filename)
 
-            renderfile = RenderUploadFileHTML(saved_file)
+            try:
+                renderfile = RenderUploadFileHTML(saved_file)
+                bar = renderfile.render()
 
-            bar = renderfile.render()
+                messages.success(request, 'File uploaded successfully')
 
-            messages.success(request, 'File uploaded successfully')
-            context = {
-                'form': self.form,
-                'bar': bar,
-            }
+                context = {
+                    'form': self.form,
+                    'bar': bar,
+                }
 
-            return render(request, self.template_name, context)
+                return render(request, self.template_name, context)
+            except ValueError as e:
+                messages.error(request, e)
+                return render(request, self.template_name, {'form': self.form})
         else:
             messages.error(request, 'File upload failed. Please try again')
             return render(request, self.template_name, {'form': self.form})
