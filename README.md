@@ -21,7 +21,7 @@ Create a webpage using the Vue framework to display this data in a table. Then a
 - [Vue Watcher - W3Shools](https://www.w3schools.com/vue/vue_watchers.php)
 - [Vue v-show - W3Shools](https://www.w3schools.com/vue/vue_v-show.php)
 
-## Language and Libraries Used
+## Technologies used
 - [HTML](https://www.w3.org/html/)
 - [CSS](https://www.w3.org/css/)
 - [JavaScript](https://www.javascript.com/)
