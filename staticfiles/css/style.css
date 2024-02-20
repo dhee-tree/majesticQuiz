@@ -1,0 +1,62 @@
+/* Universal styles */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    --mj-blue: #2d526d;
+    --mj-accent-blue: #4f81bd;
+    --mj-orange: #ff8d40;
+    --mj-red: #c82e2e;
+}
+
+#app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: var(--mj-accent-blue);
+    color: white;
+}
+
+th {
+    background-color: var(--mj-blue);
+    color: white;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    margin: 10px;
+}
+
+/* Button styles */
+.btn-mj-red {
+    background-color: var(--mj-red);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn-mj-red:hover {
+    background-color: var(--mj-red);
+    opacity: 0.8;
+}
