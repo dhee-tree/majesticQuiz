@@ -18,4 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('MainApp.urls')),
+    path('data/', include('UploadDataApp.urls')),
 ]
