@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'MainApp.main_middleware.Main505Middleware',
 ]
 
 ROOT_URLCONF = 'MajesticDataProject.urls'
