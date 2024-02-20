@@ -7,9 +7,9 @@ Create a visualisation of each set of fictitious data.
 
 #### Approach
 - I used matplotlib library to visualise the data.
-- The program uses three python files: `main.py`, `visualisation.py` and `data.py`.
+- The program uses three python files: `main.py`, `visualiser.py` and `data.py`.
 - The `data.py` file contains the data for the visualisation.
-- The `visualisation.py` file contains the class that takes in the data, labels and title as parameters.
+- The `visualiser.py` file contains the class that takes in the data, labels and title as parameters.
 - The `main.py` file contains the main program that runs the visualisation.
 
 #### Resources
