@@ -1,18 +1,19 @@
 /* Universal styles */
 html,
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    --mj-blue: #2d526d;
-    --mj-accent-blue: #4f81bd;
-    --mj-orange: #ff8d40;
-    --mj-red: #c82e2e;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  --mj-blue: #2d526d;
+  --mj-accent-blue: #4f81bd;
+  --mj-orange: #ff8d40;
+  --mj-red: #c82e2e;
 }
 
 /* Button styles */
-.btn-mj-red {
-    background-color: var(--mj-red);
+.btn-mj-red,
+.btn-mj-blue,
+.btn-mj-accent-blue {
     color: white;
     padding: 10px 20px;
     border: none;
@@ -22,8 +23,33 @@ body {
     text-decoration: none;
 }
 
-.btn-mj-red:hover {
-    background-color: var(--mj-red);
+.btn-mj-red:hover,
+.btn-mj-blue:hover,
+.btn-mj-accent-blue:hover {
     opacity: 0.8;
     color: white;
+}
+
+.btn-mj-red {
+    background-color: var(--mj-red);
+}
+
+.btn-mj-blue {
+    background-color: var(--mj-blue);
+}
+
+.btn-mj-accent-blue {
+    background-color: var(--mj-accent-blue);
+}
+
+.btn-mj-red:hover {
+    background-color: var(--mj-red);
+}
+
+.btn-mj-blue:hover {
+    background-color: var(--mj-blue);
+}
+
+.btn-mj-accent-blue:hover {
+    background-color: var(--mj-accent-blue);
 }
