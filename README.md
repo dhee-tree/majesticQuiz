@@ -43,4 +43,5 @@ Create a webpage using the Vue framework to display this data in a table. Then a
 7. If the name entered is not in the table, a message would be displayed to inform you that the name is not in the table.
 
 ## Accessing the Webpage
-The webpage can be accessed [here](https://vue.ighomena.me)
+This branch is deployed using GitHub Pages and can be accessed via the link below:
+[link](https://vue.ighomena.me)
