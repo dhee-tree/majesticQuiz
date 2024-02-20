@@ -2,13 +2,12 @@ import plotly.express as px
 from .models import Drink, Sweet
 
 class RenderHTMLData:
-    def __init__(self, model):
-        self.model = model
+    def __init__(self):
+        pass
 
     def render(self, name):
-        data = self.model.objects.all()
-
         if name == 'Drink':
+            data = Drink.objects.all()
             fig = px.bar(
                 x=[d.name for d in data],
                 y=[d.litre for d in data],
@@ -17,6 +16,7 @@ class RenderHTMLData:
             )
 
         else:
+            data = Sweet.objects.all()
             fig = px.bar(
                 x=[d.name for d in data],
                 y=[d.mass for d in data],
