@@ -11,7 +11,7 @@ class RenderHTMLData:
             fig = px.bar(
                 x=[d.name for d in data],
                 y=[d.litre for d in data],
-                title='Estimated litres of soft drink consumed at a student hackathon.',
+                title='Drink Data',
                 labels={'x': 'Drink', 'y': 'Litre'}
             )
 
@@ -20,7 +20,7 @@ class RenderHTMLData:
             fig = px.bar(
                 x=[d.name for d in data],
                 y=[d.mass for d in data],
-                title='Estimated mass of sweets consumed during a student hackathon',
+                title='Sweet Data',
                 labels={'x': 'Sweet', 'y': 'Mass'}
             )
 
