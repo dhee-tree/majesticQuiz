@@ -6,7 +6,7 @@ class RenderUploadFileHTML:
     def __init__(self, file):
         self.file = file
 
-    def render(self):        
+    def render(self, uploaded_file_name):        
         df = pd.read_csv(self.file)
 
         # Get file header
@@ -19,7 +19,8 @@ class RenderUploadFileHTML:
             name = header[0]
             unit = header[1]
 
-            fig = px.bar(df, x=name, y=unit, title='Uploaded Data', labels={name: name.capitalize(), unit: unit.capitalize()})
+            fig = px.bar(df, x=name, y=unit, title=uploaded_file_name, labels={
+                         name: name.capitalize(), unit: unit.capitalize()})
 
             # Styling the plot
             fig.update_traces(marker_color='#ff8d40') # Change the color of the bars

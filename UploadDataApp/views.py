@@ -26,7 +26,7 @@ class UploadDataView(View):
 
             try:
                 renderfile = RenderUploadFileHTML(saved_file)
-                bar = renderfile.render()
+                bar = renderfile.render(uploaded_file.name)
 
                 messages.success(request, 'File uploaded successfully')
 
