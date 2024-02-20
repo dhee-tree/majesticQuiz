@@ -12,7 +12,7 @@ class RenderHTMLData:
                 x=[d.name for d in data],
                 y=[d.litre for d in data],
                 title='Drink Data',
-                labels={'x': 'Drink', 'y': 'Litre'}
+                labels={'x': 'Drink', 'y': 'Litre (l)'}
             )
 
         else:
@@ -21,7 +21,7 @@ class RenderHTMLData:
                 x=[d.name for d in data],
                 y=[d.mass for d in data],
                 title='Sweet Data',
-                labels={'x': 'Sweet', 'y': 'Mass'}
+                labels={'x': 'Sweet', 'y': 'Mass (g)'}
             )
 
         fig.update_traces(marker_color='#ff8d40')
