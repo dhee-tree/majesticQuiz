@@ -1,6 +1,5 @@
 from django.views import View
 from django.shortcuts import render
-from .models import Drink, Sweet
 from .utils import RenderHTMLData
 
 # Create your views here.
@@ -18,11 +17,11 @@ class ViewData(View):
 
     def get(self, request, data):
         if data == 'drink':
-            drink_data = RenderHTMLData(Drink)
+            drink_data = RenderHTMLData()
             bar = drink_data.render('Drink')
             data = 'Drink'
         elif data == 'sweet':
-            sweet_data = RenderHTMLData(Sweet)
+            sweet_data = RenderHTMLData()
             bar = sweet_data.render('Sweet')
             data = 'Sweet'
         else:
