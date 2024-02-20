@@ -1,36 +1,27 @@
-import matplotlib.pyplot as plt
-from django.contrib.staticfiles.storage import staticfiles_storage
+import plotly.express as px
+from .models import Drink, Sweet
 
-class DataVisualisation:
-    """
-    A class to visualise data. Takes a dictionary of data, x and y labels and a title.
-    """
+class RenderHTMLData:
+    def __init__(self, model):
+        self.model = model
 
-    def __init__(self, data, x_label, y_label, title):
-        self.data = data
-        self.x_label = x_label
-        self.y_label = y_label
-        self.title = title
+    def render(self, name):
+        data = self.model.objects.all()
 
-    def plot_data(self, filename):
-        """Method to plot the data"""
-        data_names = list(self.data.keys())
-        data_amount = list(self.data.values())
+        if name == 'Drink':
+            fig = px.bar(
+                x=[d.name for d in data],
+                y=[d.litre for d in data],
+                title='Estimated litres of soft drink consumed at a student hackathon.',
+                labels={'x': 'Drink', 'y': 'Litre'}
+            )
 
-        plt.style.use('seaborn-v0_8-whitegrid')
-        plt.rcParams.update({
-            'figure.autolayout': True,
-            'figure.constrained_layout.h_pad':  100,
-            })
+        else:
+            fig = px.bar(
+                x=[d.name for d in data],
+                y=[d.mass for d in data],
+                title='Estimated mass of sweets consumed during a student hackathon',
+                labels={'x': 'Sweet', 'y': 'Mass'}
+            )
 
-        fig, ax = plt.subplots()
-        ax.bar(data_names, data_amount)
-
-        labels = ax.get_xticklabels()
-        plt.setp(labels, rotation=45, horizontalalignment='right')
-
-        ax.set_xlabel(self.x_label)
-        ax.set_ylabel(self.y_label)
-        plt.title(self.title)
-        plt.savefig(staticfiles_storage.path(f'image/{filename}'), dpi=80)
-        plt.close()
+        return fig.to_html()
