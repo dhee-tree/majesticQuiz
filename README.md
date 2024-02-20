@@ -11,4 +11,4 @@ Each test directory contains a `README.md` file that contains the details of the
 
 ## More on deployment:
 - I have deployed the vue task using GitHub pages from the [pages](https://github.com/dhee-tree/majesticQuiz/tree/pages) branch. The deployed site can be found [here](https://vue.ighomena.me).
-- I have used Django to create a web application for the test C - visualising data. The code for the Django web application can be found in the [django-visualisation](https://github.com/dhee-tree/majesticQuiz/tree/django-visualisation) branch with its own README.md file. The deployed site can be found [here](https://vis.ighomena.me).
+- I have used Django to create a web application for the test C - visualising data. The code for the Django web application can be found in the [django-production](https://github.com/dhee-tree/majesticQuiz/tree/django-production) branch with its own README.md file. The deployed site can be found [here](https://vis.ighomena.me).
