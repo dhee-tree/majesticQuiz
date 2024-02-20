@@ -1,7 +1,7 @@
 from django.views import View
 from django.shortcuts import render
-from .utils import DataVisualisation
-from .data import sweet_data, drink_data
+from .models import Drink, Sweet
+from .utils import RenderHTMLData
 
 # Create your views here.
 
@@ -17,18 +17,19 @@ class ViewData(View):
     template_name = 'data/view_data.html'
 
     def get(self, request, data):
-        if data == 'sweet':
-            data_vis = DataVisualisation(sweet_data, 'Sweets', 'Amount', 'Sweet Data')
-            data_vis.plot_data('sweet_data.png')
-            filename = 'sweet_data.png'
-        elif data == 'drink':
-            data_vis = DataVisualisation(drink_data, 'Drinks', 'Amount', 'Drink Data')
-            data_vis.plot_data('drink_data.png')
-            filename = 'drink_data.png'
+        if data == 'drink':
+            drink_data = RenderHTMLData(Drink)
+            bar = drink_data.render('Drink')
+            data = 'Drink'
+        elif data == 'sweet':
+            sweet_data = RenderHTMLData(Sweet)
+            bar = sweet_data.render('Sweet')
+            data = 'Sweet'
         else:
-            return render(request, '404.html')
+            data = None
 
         context = {
-            'file': filename,
+            'bar': bar,
+            'data': data
         }
         return render(request, self.template_name, context)
