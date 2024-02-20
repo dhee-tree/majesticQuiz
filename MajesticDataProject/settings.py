@@ -135,3 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Heroku settings
 django_heroku.settings(locals())
+
+CSRF_TRUSTED_ORIGINS = ['https://vis.ighomena.me', 'http://vis.ighomena.me']
