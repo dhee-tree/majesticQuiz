@@ -2,10 +2,13 @@ from django.shortcuts import render
 from django.views import View
 from django.contrib import messages
 from .utils import RenderUploadFileHTML
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_protect
 from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
+@method_decorator(csrf_protect, name='dispatch')
 class UploadDataView(View):
     form = None
     template_name = 'data/upload_data.html'
