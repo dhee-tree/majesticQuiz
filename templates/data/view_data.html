@@ -6,14 +6,11 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center pt-5">
-                <h1>Viewing Data</h1>
-                
-                <img src="{% static 'image/' %}{{ file }}" alt="Data Visualisation" width="80%" height="80%">
-
-                <p>{{ file }}</p>
+                <h1>Viewing {{ data }} Data</h1>
+                {{ bar|safe }}
             </div>
 
-            <div class="col-sm-12 text-center">
+            <div class="col-sm-12 text-center pt-5">
                 <a href="{% url 'index' %}" class="btn-mj-red">Back to Home</a>
             </div>
         </div>
