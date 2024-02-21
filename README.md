@@ -2,10 +2,11 @@
 
 ## By: Ighomena Odebala
 
-This is the django web application for [visualisng_data_task](https://github.com/dhee-tree/majesticQuiz/tree/main/visualising_data_task) on the main branch of this repository.
-Welcome to my Majestic Quiz repository, django-visualisation branch. 
+Welcome to my Majestic Quiz repository, django-production branch. 
 
-This branch contains the code for the django web application that visualises the data from test C.
+This is the django web application for [visualisng_data_task](https://github.com/dhee-tree/majesticQuiz/tree/main/visualising_data_task) on the main branch of this repository.
+
+This branch contains the code for the django web application that deploys the application to heroku.
 
 The application is built using the django framework and the data is visualised using the plotly library.
 
@@ -13,6 +14,9 @@ The application is built using the django framework and the data is visualised u
 - I stored the data in a csv file and used management commands to load the data into the database.
 - I used the django ORM to query the data and used the plotly library to visualise the data.
 - The database is a postgres database hosted on my private server.
+- I also added an upload feature that allows users to upload their own data and visualise it.
+- Users can download a sample csv file to see the format of the data that can be uploaded.
+- The application does not accept any other file format other than csv, or a csv file that does not have exactly 2 columns.
 
 ## Technologies used
 
@@ -22,17 +26,19 @@ The application is built using the django framework and the data is visualised u
 - [Heroku](https://www.heroku.com/)
 - [Cloudflare](https://www.cloudflare.com/)
 
+## Resources
+- [Plotly](https://plotly.com/python/plot-data-from-csv/)
+
 ## Running the application locally
 
-Assuming you have python installed on your machine and have setup the environment variables for the application, you can run the application locally using the following steps:
-- Clone the repository
-- Create or activate a virtual environment (optional).
-- Install the requirements using the command `pip install -r requirements.txt`
-- Run the migrations using the command `python manage.py migrate`
-- Load data into the database using the command `python manage.py load_drink` and `python manage.py load_sweet`
-- Run the application using the command `python manage.py runserver`
+To run the application locally, it is advisable you clone the [main branch](https://github.com/dhee-tree/majesticQuiz/tree/main/visualising_data_task) of this repository and follow the instructions in the README file in the `visualising_data_task` directory.
 
 ## Accessing the application
 
 The application is hosted on heroku and can be accessed via the link below:
 [https://vis.ighomena.me/](https://vis.ighomena.me/)
+
+## Usage
+- Navigate to the homepage and click any of the visualise button to visualise the data.
+- On the homepage, click on the upload button to upload your own data and visualise it.
+- On the upload page, click on the download button to download a sample csv file to for upload (optional).
