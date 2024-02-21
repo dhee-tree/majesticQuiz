@@ -1,0 +1,46 @@
+{% extends "utils/base.html" %}
+{% block title %}Upload Data{% endblock %}
+{% load static %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center pt-5">
+                <h1>Upload Data</h1>
+                
+                {% if bar %}
+                    <p>Here is your data.</p>
+                    {{bar|safe}}
+                {% else %}
+                    <p>Upload your own data to visualise</p>
+                {% endif %}
+                
+                <hr>
+                
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            {% if message.tags == 'error' %}
+                                <p class="text-danger"><i class="fa-solid fa-xmark"></i> {{ message }}</p>
+                            {% else %}
+                                <p class="text-success"><i class="fa-solid fa-check fa-fade"></i> {{ message }}</p>
+                            {% endif %}
+                            
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn-mj-accent-blue">Upload</button>
+                </form>
+                <a href="{% static 'samples/population.csv' %}"> Download Sample CSV File </a>
+            </div>
+
+            <div class="col-sm-12 text-center pt-5">
+                <a href="{% url 'index' %}" class="btn-mj-red">Back to Home</a>
+            </div>
+        </div>
+        </div>
+{% endblock %}

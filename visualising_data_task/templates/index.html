@@ -1,0 +1,28 @@
+{% extends "utils/base.html" %}
+{% block title %}Majestic Visualisation Data{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-12 text-center pt-5">
+                <h1>Visualise Majestic Data</h1>
+            </div>
+            
+            <div class="col-sm-6 p-5">
+                <h2 class="pb-3">Estimated litres of soft drink consumed at a student hackathon.</h2>
+                <a href="{% url 'view_data' data='drink' %}" class="btn-mj-blue">Visualise Drink Data</a>
+            </div>
+
+            <div class="col-sm-6 p-5">
+                <h2 class="pb-3">Estimated mass of sweets consumed during a student hackathon.</h2>
+                <a href="{% url 'view_data' data='sweet' %}" class="btn-mj-blue">Visualise Sweet Data</a>
+            </div>
+
+            <div class="col-sm-12 p-5">
+                <hr>
+                <h2 class="pb-3">Upload your own data to visualise</h2>
+                <a href="{% url 'upload_data' %}" class="btn-mj-accent-blue">Upload Own Data</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
