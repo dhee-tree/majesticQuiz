@@ -8,11 +8,9 @@ Create a visualisation of each set of fictitious data.
 ## Approach
 - I stored the data in a csv file and used management commands to load the data into the database. This ensures that the data from Majestic is always.
 - I used the django ORM to query the data and used the plotly library to visualise the data.
-- The database is a postgres database hosted on my private server.
 - I also added an upload feature that allows users to upload their own data and visualise it.
 - Users can download a sample csv file to see the format of the data that can be uploaded.
-- The application would not accept any other file format other than csv, or a csv file that does not have exactly 2 columns.
-- The application is hosted on heroku and the domain is managed by cloudflare.
+- The application does not accept any other file format other than csv, or a csv file that does not have exactly 2 columns.
 
 ## Technologies used
 
@@ -39,4 +37,7 @@ Assuming you have python installed on your machine and have setup the environmen
 ## Usage
 - Navigate to the homepage and click any of the visualise button to visualise the data.
 - On the homepage, click on the upload button to upload your own data and visualise it.
-- On the upload page, clic on the download button to download a sample csv file to for upload (optional).
+- On the upload page, click on the download button to download a sample csv file to for upload (optional).
+
+## Live Application
+The application is live on heroku and can be accessed [here](https://vis.ighomena.me)
